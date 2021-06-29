@@ -1,7 +1,21 @@
 <template>
-  <Tutorial />
+  <div :style="image">
+    <NuxtLink to="/about">
+      About
+    </NuxtLink>
+    <NuxtLink to="/projects">
+      Projects
+    </NuxtLink>
+  </div>
 </template>
 
 <script>
-export default {}
+import background from 'assets/background.svg'
+export default {
+  data () {
+    return {
+      image: { backgroundImage: `url(${background})` }
+    }
+  }
+}
 </script>
